@@ -1,0 +1,107 @@
+/*footer kecil*/
+.auth-footer {
+  width: 100vw;
+  margin-top: auto;              
+  padding: 0px 8px;
+  color: #FBE5CC;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;        
+  gap: 14px;
+
+  .copy { white-space: nowrap; }
+
+  .links,
+  .social {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #FBE5CC;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  .social i { 
+    font-size: 16px;
+    color: #f1f1f1;
+}
+}
+
+@media (max-width: 480px) {
+  .login-card { padding: 22px 18px; }
+}
+
+/* FOOTER PROFESIONAL */
+.footer {
+    background: #1A1C23; /* Sedikit lebih gelap dari area model untuk kontras */
+    padding: 80px 20px 20px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 60px;
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+
+    .footer-brand {
+        img {
+            max-width: 15rem;
+            height: auto;
+            margin-bottom: 2.5rem;
+        }
+
+        p {
+            color: rgba($light, 0.6);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            max-width: 300px;
+        }
+    }
+
+    .footer-links {
+        h5 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        a {
+            display: block;
+            margin: 12px 0;
+            color: rgba($light, 0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $yellow;
+                transform: translateX(4px); /* Efek slide ringan saat hover */
+            }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 30px 0 10px;
+        border-top: 1px solid rgba($light, 0.05);
+        color: rgba($light, 0.4);
+        font-size: 0.85rem;
+    }
+}

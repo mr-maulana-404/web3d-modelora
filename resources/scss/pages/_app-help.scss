@@ -1,0 +1,55 @@
+    .help-header {
+        background: linear-gradient(135deg, #3d4352 0%, #252932 100%);
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        margin-bottom: 2rem;
+    }
+    .faq-section {
+        background-color: #3d4352;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        margin-bottom: 1.5rem;
+    }
+    .faq-title {
+        color: #ffc107;
+        font-weight: 600;
+        border-bottom: 2px solid #4e5669;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .accordion-item {
+        background-color: #2e323d !important;
+        border: 1px solid #4e5669 !important;
+        color: #f8f9fa !important;
+        margin-bottom: 0.5rem;
+        border-radius: 8px !important;
+        overflow: hidden;
+    }
+    .accordion-button {
+        background-color: #343a40 !important;
+        color: #f8f9fa !important;
+        font-weight: 500;
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: #4e5669 !important;
+        color: #ffc107 !important;
+        box-shadow: none !important;
+    }
+    .accordion-button::after {
+        filter: invert(1);
+    }
+    .contact-card {
+        background: linear-gradient(135deg, #1f232b 0%, #2e323d 100%);
+        border: 1px solid #ffc107;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .badge-step {
+        background-color: #ffc107;
+        color: #212529;
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }

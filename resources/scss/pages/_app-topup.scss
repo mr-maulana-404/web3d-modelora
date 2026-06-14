@@ -1,0 +1,83 @@
+.credit-display {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #F7BA2C;
+    i { color: #F7BA2C; }
+}
+
+/* --- STYLING CARD TOPUP SESUAI DESAIN --- */
+.topup-card {
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer; /* Memberikan efek bahwa ini dapat diklik */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+    
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+    }
+
+    .card-img-top-custom {
+        /* Gradient transisi warna oranye ke putih seperti di desain */
+        background: linear-gradient(180deg, #F3A030 0%, #F9C780 60%, #ffffff 100%);
+        height: 180px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 25px;
+
+        .coin-img {
+            width: 150px;
+            object-fit: contain;
+            z-index: 2;
+            /* Memberikan shadow agar koin terlihat lebih 3D/menyatu */
+            filter: drop-shadow(0px 8px 10px rgba(0,0,0,0.25));
+        }
+
+        .credit-large-text {
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 900;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            z-index: 3;
+            /* Membuat efek angka transparan dengan outline (garis tepi) putih tebal */
+            color: transparent;
+            -webkit-text-stroke: 3px #ffffff;
+            filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
+        }
+    }
+
+    .card-body {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        
+        .topup-price {
+            color: #F3A030;
+            font-size: 1.15rem;
+        }
+
+        .old-price {
+            font-size: 0.75rem;
+            color: #999999;
+            font-weight: bold;
+        }
+
+        .badge-discount {
+            background-color: #F3A030;
+            color: #ffffff;
+            font-size: 0.7rem;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    }
+}

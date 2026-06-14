@@ -1,0 +1,7 @@
+$poppins-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+:root { --ff-base: #{$poppins-family}; }
+body { font-family: $poppins-family; }
+
+@each $w in 100,200,300,400,500,600,700,800,900 {
+  .fw-#{$w} { font-weight: $w !important; }
+}

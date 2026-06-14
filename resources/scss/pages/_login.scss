@@ -1,0 +1,122 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #313540, #151C26);
+  padding: 20px;
+
+  .alert-custom {
+      padding: 8px 12px;
+      font-size: 14px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+  }
+
+  .brand-logo {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    img {
+      max-width: 300px;
+      width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .brand-subtitle {
+      text-align: center;
+      color: #d9d9d9;
+      font-size: 16px;
+      margin-top: 6px;
+    }
+  }
+
+  .login-card {
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    padding: 18px 32px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+    h2 {
+      font-size: 27px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #151C26;
+    }
+
+    p {
+      font-size: 12px;
+      color: #151C26;
+      margin-bottom: 16px;
+
+      a {
+        color: #F44A2D;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 12px;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .forgot {
+      a {
+        font-size: 12px;
+        color: #151C26;
+        text-decoration: underline;
+
+        &:hover {
+            color: #F44A2D;
+        }
+      }
+    }
+
+    .form-control {
+      border: 1px solid #313540;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 12px;
+      margin-bottom: 16px;
+
+      &:focus {
+        border-color: #313540;
+        box-shadow: 0 0 0 0.2rem rgba(81, 64, 60, 0.25);
+      }
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: flex-end; 
+        margin-top: 8px;
+    }
+
+    .btn-auth {
+        background: linear-gradient(to right, #F7BA2C, #F44A2D);
+        color: #d9d9d9;
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 10px 22px;
+        transition: transform .18s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+

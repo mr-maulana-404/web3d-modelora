@@ -1,0 +1,75 @@
+/* --- SAVED MODEL CARD STYLING --- */
+.saved-model-card {
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+
+    /* Membungkus image agar sudut melengkungnya rapi & bg estetik */
+    .card-img-wrapper {
+        background-color: #E2E8F0; 
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        overflow: hidden;
+
+        .card-img-top {
+            transition: transform 0.5s ease;
+            mix-blend-mode: multiply; 
+        }
+    }
+
+    /* --- ACTION BUTTONS STYLING --- */
+    .btn-action {
+        display: inline-flex; // Gunakan inline-flex untuk tombol
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 8px 5px; // Padding dikurangi sedikit agar lebih pas
+        border-radius: 8px;
+        transition: all 0.2s ease-in-out;
+        border: 1.5px solid transparent;
+        cursor: pointer;
+        white-space: nowrap; // Mencegah teks terpotong menjadi 2 baris
+    }
+
+    /* Tombol Edit (Outline minimalis) */
+    .custom-btn-edit {
+        background-color: transparent;
+        border-color: #cbd5e1;
+        color: #475569;
+        
+        &:hover {
+            background-color: #f8fafc;
+            border-color: #94a3b8;
+            color: #0f172a;
+        }
+    }
+
+    /* Tombol Download (Aksen utama / Kuning Mod3Lora) */
+    .custom-btn-download {
+        background-color: #F7BA2C; 
+        color: #ffffff;
+        
+        &:hover {
+            background-color: #dfa31e;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(247, 186, 44, 0.3);
+        }
+    }
+
+    /* Tombol Delete (Merah soft / berbahaya) */
+    .custom-btn-delete {
+        background-color: transparent;
+        border-color: #fecaca;
+        color: #ef4444;
+        width: 38px; // Fixed width agar hemat area horizontal
+        height: 38px; // Fixed height agar bentuknya kontak simetris sempurna
+        padding: 0; // Reset padding khusus tombol ikon
+        
+        &:hover {
+            background-color: #fef2f2;
+            border-color: #fca5a5;
+            color: #dc2626;
+        }
+    }
+}

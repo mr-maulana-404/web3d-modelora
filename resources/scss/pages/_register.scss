@@ -1,0 +1,179 @@
+.register-page {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+
+  /* ----- Kiri = Komunis ----- */
+  .left-side {
+    flex: 1;
+    background: linear-gradient(to bottom, #313540, #151C26);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+
+    .brand-logo {
+      text-align: center;
+      margin-bottom: auto;
+      margin-top: 15rem;
+
+      img {
+        max-width: 300px;
+        width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .brand-subtitle {
+        margin-top: 8px;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+
+    .auth-footer {
+      margin-top: auto; 
+    }
+  }
+
+  /* ----- Kanan = Fasis ----- */
+  .right-side {
+    flex: 1;
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+
+    .register-card {
+      width: 100%;
+      max-width: 420px;
+
+      h2 {
+        font-size: 27px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #151C26;
+      }
+
+      p {
+        font-size: 12px;
+        color: #151C26;
+        margin-bottom: 3rem;
+
+        a {
+          color: #F44A2D;
+          font-weight: 600;
+          padding-left: 1rem;
+          text-decoration: none;
+
+          &:hover { 
+            text-decoration: underline; 
+          }
+        }
+      }
+
+      label {
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        display: block;
+      }
+
+      .form-control {
+        font-size: 12px;
+        padding: 10px 12px;
+        margin-bottom: 14px;
+        border: 1px solid #313540;
+        border-radius: 8px;
+
+        &:focus {
+          border-color: #313540;
+          box-shadow: 0 0 0 .2rem rgba(81, 64, 60, 0.25);
+        }
+      }
+
+      .form-actions {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .btn-register {
+        background: linear-gradient(to right, #F7BA2C, #F44A2D);
+        color: #FBE5CC;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 20px;
+        font-size: 12px;
+        font-weight: 700;
+        transition: transform 0.18s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .register-page {
+    flex-direction: column;
+
+    .left-side, .right-side {
+      flex: none;
+      width: 100%;
+      min-height: 50vh;
+
+      .brand-logo {
+        margin-top: auto;
+      }
+    }
+
+    .right-side {
+      padding: 24px;
+    }
+  }
+}
+
+.register-footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 0px 8px;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  .copy {
+    white-space: nowrap;
+  }
+
+  .links,
+  .social {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .social i {
+    font-size: 16px;
+    color: #f1f1f1;
+  }
+}

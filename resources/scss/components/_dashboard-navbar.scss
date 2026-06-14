@@ -1,0 +1,309 @@
+// Variables
+$nav-bg-scrolled: #2E323D;
+$nav-text-default: #D9D9D9; 
+$nav-text-scrolled: #D9D9D9; 
+$color-orange: #F7BA2C;
+$color-red: #EA5459;
+$color-active: #EA5459; 
+
+.dashboard-navbar {
+    transition: background-color 0.4s ease, padding 0.4s ease;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    // Logo styling
+    .navbar-brand img {
+        height: 30px;
+        width: auto;
+        margin-right: 2rem;
+    }
+
+    // Secara default (saat transparan), sembunyikan logo light (scrolled)
+    .logo-scrolled {
+        display: none;
+    }
+
+    // Toggler (Hamburger)
+    .navbar-toggler {
+        border: none;
+        padding: 0;
+        &:focus {
+            box-shadow: none;
+        }
+        .toggler-icon {
+            font-size: 1.5rem;
+            background: linear-gradient(to right, $color-orange, $color-red);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent; 
+        }
+    }
+
+    // 1. STYLE DEFAULT (TOP POSITION)
+    background-color: transparent;
+
+    .nav-link {
+        font-weight: 800;
+        font-size: 12px;
+        color: $nav-text-default;
+        margin-right: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-active;
+        }
+
+        &.active {
+            color: $color-active !important;
+        }
+    }
+
+    // Tombol Auth Switch (GUEST)
+    .auth-buttons {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        padding: 2px;
+        overflow: hidden;
+        background: transparent; // Default
+        // border: 1px solid $nav-text-scrolled; // Border tipis 
+        height: 40px;
+        width: 180px; // Fixed width agar pas
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: calc(50% - 2px);
+            height: calc(100% - 4px);
+            border-radius: 6px;
+            background: linear-gradient(90deg, $color-orange, $color-red);
+            z-index: 1;
+            transform: translateX(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .btn-login, .btn-signup {
+            position: relative;
+            flex: 1;
+            text-align: center;
+            padding: 6px 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: $nav-text-scrolled; 
+            text-decoration: none;
+            z-index: 2;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+
+        // Logic Hover Switch
+        &:has(.btn-login:hover)::before {
+            transform: translateX(0%);
+        }
+        &:has(.btn-signup:hover)::before {
+            transform: translateX(100%);
+        }
+        
+        
+        &:has(.btn-login:hover) .btn-login { color: white; }
+        &:has(.btn-signup:hover) .btn-signup { color: white; }
+    }
+    
+    // Auth Icons (LOGGED IN)
+    .nav-icon-btn {
+        color: $nav-text-scrolled;
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .user-avatar-icon {
+        width: 32px;
+        height: 32px;
+        background-color: #ddd; 
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #555;
+        transition: transform 0.3s ease, color 0.3s ease;
+  
+        &:hover {
+            transform: scale(1.2);
+            background: linear-gradient(to right, #F7BA2C, #F44A2D);
+            color: #fff;
+        }
+    }
+
+    .dropdown-toggle-custom {
+        color: $nav-text-default;
+        cursor: pointer;
+    }
+
+    // Model Gallery Button Style (Special)
+    .nav-btn-gallery {
+        background: linear-gradient(90deg, $color-orange, $color-red);
+        color: white !important;
+        padding: 5px 15px !important;
+        border-radius: 4px;
+
+        &:hover {
+            background: linear-gradient(90deg, $color-red, $color-red);
+        }
+        
+        &.active {
+             background: linear-gradient(90deg, darken($color-orange, 10%), darken($color-red, 10%));
+        }
+    }
+
+
+    // 2. STYLE SCROLLED (Saat discroll ke bawah)
+    &.scrolled {
+        background-color: $nav-bg-scrolled;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+        // Swap Logo
+        // .logo-default { 
+        //     display: none; 
+        // }
+        // .logo-scrolled { 
+        //     display: block; 
+        // }
+
+        .nav-link {
+            color: $nav-text-scrolled;
+        }
+
+        .nav-icon-btn, .dropdown-toggle-custom {
+            color: $nav-text-scrolled;
+        }
+
+        .auth-buttons {
+            // border: 1px solid $nav-text-scrolled; // border tipis
+            .btn-login, .btn-signup {
+                color: $nav-text-scrolled;
+            }
+        }
+    }
+
+    // 3. DROPDOWN MENU (DESKTOP)
+    .custom-dropdown-menu {
+        background-color: $nav-bg-scrolled;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        margin-top: 15px;
+        padding-bottom: 0;
+        
+        .dropdown-item {
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 10px 1rem;
+            text-transform: uppercase;
+            
+            &:hover {
+                background-color: rgba(255,255,255,0.1);
+                color: $color-orange;
+            }
+        }
+    }
+
+
+    // 4. MOBILE VIEW CUSTOMIZATION (< 992px)
+    @media (max-width: 991.98px) {
+        
+        .navbar-collapse {
+            position: absolute;
+            top: 70px;
+            right: 1.5rem; 
+            width: 300px; 
+            background-color: $nav-bg-scrolled;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            
+            // Animasi slide in
+        }
+
+        .navbar-nav {
+            align-items: flex-start; 
+            
+            .nav-link {
+                color: white; 
+                margin-bottom: 1rem;
+                padding: 0;
+                font-size: 0.9rem;
+                
+                &:hover {
+                    color: $color-orange;
+                }
+            }
+        }
+
+        .mobile-divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, $color-orange, $color-red); 
+        }
+
+        .auth-container {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        // Mobile Auth Buttons
+        .auth-buttons {
+            width: 100%;
+            border: 1px solid $color-orange;
+            margin-top: 1rem;
+            
+            .btn-login, .btn-signup {
+                color: white;
+            }
+        }
+
+        // Mobile User Info styling
+        .user-dropdown {
+            width: 100%;
+        }
+        
+        .user-avatar-icon {
+            width: 48px;
+            height: 48px;
+            font-size: 1.5rem;
+            background-color: #eee;
+            color: #333;
+        }
+
+        .mobile-user-menu {
+            width: 100%;
+        }
+
+        .mobile-link {
+            display: block;
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            
+            &:hover {
+                color: $color-orange;
+            }
+        }
+    }
+}

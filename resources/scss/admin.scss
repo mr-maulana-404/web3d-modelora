@@ -1,0 +1,18 @@
+//Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Font Awesome (semua set ikon: solid, regular, brands)
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+// Bagian Import tipografi
+@import 'typography';
+
+// Style import template
+@import 'import-style';
+
+// Bagian import pages dan komponen (SCSS kustom)
+// Bagian pages
+
+// Bagian component
+@import 'components/navbar-admin';
+@import 'pages/model-create';

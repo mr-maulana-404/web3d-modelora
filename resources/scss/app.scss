@@ -1,0 +1,26 @@
+/* Bagian Import Bootstrap (SASS) */
+@import 'bootstrap/scss/bootstrap';
+
+/* Font Awesome (semua set ikon: solid, regular, brands) */
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+/* Bagian Import tipografi */
+@import 'typography';
+
+/* Bagian Import Komponen */
+@import 'components/dashboard-navbar';
+@import 'components/footer';
+@import 'components/modal-detail-model';
+
+// Bagian Import Halaman
+@import 'pages/app-dashboard';
+@import 'pages/app-help';
+@import 'pages/app-gallery';
+@import "pages/app-customize";
+@import "pages/app-savedmodel";
+@import "pages/app-enhancement";
+@import "pages/app-topup";
+@import 'pages/model-create';
+@import 'pages/login';
+@import 'pages/register';
+
