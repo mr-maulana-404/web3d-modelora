@@ -1,5 +1,6 @@
 *
-!.gitignore
-!*.gitkeep
+
 !.gitkeep
+!img/
 !*.png
+!.gitignore
